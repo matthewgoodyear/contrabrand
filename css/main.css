@@ -95,10 +95,10 @@ h1 {
 }
 
 h1 .hover {
-      display:none;
-    }
+    display:none;
+}
     h1:hover .normal {
-      display:none;
+      display: none;
     }
     h1:hover .hover {
       display:inline;  /* CHANGE IF FOR BLOCK ELEMENTS */
@@ -127,6 +127,20 @@ p {
         margin-top: 60px;
         margin-bottom: 60px;
         width: 95%;
+    }
+
+    h1 .hover {
+        display:none;
+        visibility: hidden;
+    }
+
+    h1:hover .normal {
+      display: block;
+    }
+
+    h1:hover .hover {
+      display: none;
+      visibility: hidden;
     }
 
     h1 {
