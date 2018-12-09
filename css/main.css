@@ -14,6 +14,18 @@ body {
     background-color: black;
     font-family: 'Poppins', sans-serif;
     color: white;
+    letter-spacing: -1;
+}
+
+::-moz-selection { background-color: blue; color: white; }
+::selection { background-color: blue; color: white; }
+
+#wrapper {
+    visibility: hidden;
+    padding: 40px;
+    width: 90%;
+    margin-top: 90px;
+    margin-bottom: 90px;
 }
 
 *, *:before, *:after {
@@ -23,34 +35,74 @@ body {
 }
 
 a {
-    color: #fff;
+    color: #404040;
 }
 
 a:hover {
-    color: #212121;
+    color: #FFF;
+    cursor: pointer;
 }
 
-a h1 {
+a h1:hover {
     text-decoration: underline;
 }
 
+p a {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+p a:hover {
+    color: #404040;
+}
+
 .top {
+    position: fixed;
+    width: 100%;
+    top: 0;
     padding: 40px;
+    background-color: black;
 }
 
 .bottom {
+    position: fixed;
     width: 100%;
-    position: absolute;
-    bottom: 0;
     padding: 40px;
+    bottom: 0;
+    background-color: black;
+}
+
+.print {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+}
+
+.store {
+    color: #404040;
 }
 
 h1 {
     display: inline-block;
     font-size: 32px;
     line-height: 1;
-    letter-spacing: -1;
+    font-weight: 500;
 }
+
+h1 .hover {
+      display:none;
+    }
+    h1:hover .normal {
+      display:none;
+    }
+    h1:hover .hover {
+      display:inline;  /* CHANGE IF FOR BLOCK ELEMENTS */
+    }
 
 .right {
     float: right;
@@ -65,12 +117,25 @@ h3 {
 }
 
 p {
-
+    font-size: 48px;
+    line-height: 60px;
 }
 
 @media only screen and (max-width : 500px) {
+    #wrapper {
+        padding: 20px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        width: 95%;
+    }
+
     h1 {
-        font-size: 24px;
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 34px;
+        line-height: 42px;
     }
 
     .top {
@@ -79,5 +144,12 @@ p {
 
     .bottom {
         padding: 20px;
+    }
+
+    .animation {
+        width: 250px;
+        height: 250px;
+        margin-top: -125px;
+        margin-left: -125px;
     }
 }
